@@ -1,0 +1,44 @@
+/* *{
+    outline: red solid 2px;
+} */
+body{background: #cccccc;}
+/* header */
+.header{
+    background-color: #333333;
+    color: #fff;
+    padding: 12px;
+    margin-bottom: 15px;
+}
+.header-create{
+    padding-top: 15px;
+}
+
+ /* sidebar */
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    border-right: 1px solid #d3d3d3;
+
+}
+.sidebar-left{
+    position: sticky;
+    top: 0;
+    height: calc(100vh-70px);
+    z-index: 1;
+    width: 18%;
+
+}
+
+.sidebar-nav li .nav-link{
+    color: #f7f2f2;
+    font-weight: bold;
+    margin-top: 10px;
+    
+} 
+#login{
+    margin-top: 30px;
+    padding: 20px;
+}
