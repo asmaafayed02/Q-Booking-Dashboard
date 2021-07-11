@@ -40,7 +40,7 @@
           $_SESSION['username'] = $row['username']; //Register Session Name
           $_SESSION['id']       = $row['user_id']; //Register Session ID
           $_SESSION['fullname'] = $row['full_name']; //Register Session Fullname
-          header('location: dashboard.php'); //redircet to dashborad
+          header('location: dashboard.php?do=dashboard'); //redircet to dashborad
           exit();
       }
 

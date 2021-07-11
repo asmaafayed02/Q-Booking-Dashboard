@@ -30,17 +30,10 @@
                              Dashboard <small>manage your site</small></h1>
                   </div>
                   <div class="col-md-2">
-                    <div class="dropdown header-create">
-                        <button class="btn  bg-light dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-                          Create Content
+                    <div class=" header-create">
+                        <button class="btn  bg-light" type="button" aria-expanded="false">
+                          <a href="add.php">Add Module</a>
                         </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                          <li><a class="dropdown-item"  type="button" data-bs-toggle="modal" data-bs-target='#addMedical'> add Clincs</a></li>
-                          <li><a class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target='#addMedical'> add Pharmacy</a></li>
-                          <li><a class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target='#addMedical'> add Hospital</a></li>
-                          <li><a class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target='#addRest'> add Coffe</a></li>
-                          <li><a class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target='#addRest'> add Hospital</a></li>
-                        </ul>
                       </div>
                   </div>
               </div>
@@ -56,32 +49,27 @@
                     <div class="sidebar-left">
                         <ul class="nav flex-column sidebar-nav">
                             <li class="nav-item">
-                              <a class="nav-link active" aria-current="page" href="index.html">
+                              <a class="nav-link active" aria-current="page" href="dashboard.php?do=dashboard">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/></svg>
-                                Home</a>
+                                Dashboard</a>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link" href="clincs.html">
+                              <a class="nav-link" href="dashboard.php?do=clinics">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/></svg>
-                                  Clincs</a>
+                                  Clinics</a>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link" href="pharmacy.html">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/></svg>
-                                  Pharmacy</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link disabled" href="hospital.html">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/></svg>
+                              <a class="nav-link" href="dashboard.php?do=hospital">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/></svg>
                                   Hospital</a>
                             </li>
                               <li class="nav-item">
-                                <a class="nav-link" href="coffee.html">
+                                <a class="nav-link" href="dashboard.php?do=coffe">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/></svg>
                                     Coffee</a>
                               </li>
                               <li class="nav-item">
-                                <a class="nav-link disabled" href="resturant.html">
+                                <a class="nav-link" href="dashboard.php?do=resturant">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/></svg>
                                     Resturant</a>
                               </li>
@@ -93,118 +81,169 @@
       <!-- main -->
       <main role="main" class="container col-md-9 ml-sm-auto col-lg-10 px-4">
         <div class="position-absolute top-50 start-50 translate-middle">
-            <h1 class="text-capitalize">Walcome to our dashboard</h1>
+          <?php if (isset($_GET['do']) && $_GET['do']  == 'dashboard'):
+            $stmt = $con -> prepare("SELECT
+                                      (SELECT COUNT(user_id) From users) AS numOfUsers,
+                                      (SELECT COUNT(clinic_id) FROM clincs) as numOfClinics,
+                                      (SELECT COUNT(hospital_id) From hospital) AS numOfHospitals,
+                                      (SELECT COUNT(coffee_id) From coffee) AS numOfcoffee,
+                                      (SELECT COUNT(resturant_id) From resturant) AS numOfresturants ");
+            $stmt ->execute();
+            $row = $stmt-> fetch();
+            $count = $stmt->rowCount();
+            ?>
+            <table class="table table-striped table-dark table-hover">
+              <thead>
+                <th>number of users</th>
+                <th>number of Clinics</th>
+                <th>number of Hospitals</th>
+                <th>number of Coffee</th>
+                <th>number of Resturants</th>
+              </thead>
+              <tbody>
+                <tr>
+                    <td><?php echo $row['numOfUsers']; ?></td>
+                    <td><?php echo $row['numOfClinics']; ?></td>
+                    <td><?php echo $row['numOfHospitals']; ?></td>
+                    <td><?php echo $row['numOfcoffee']; ?></td>
+                    <td><?php echo $row['numOfresturants']; ?></td>
+                </tr>
+              </tbody>
+            </table>
+
+          <? elseif(isset($_GET['do']) && $_GET['do']  == 'clinics'):
+            $stmt = $con -> prepare("SELECT * From clincs");
+            $stmt ->execute();
+            $rows = $stmt-> fetchAll();
+          ?>
+          <table class="table table-striped table-dark table-hover">
+            <thead>
+              <th>Id</th>
+              <th>Name</th>
+              <th>Address</th>
+              <th>phone</th>
+              <th>Discription</th>
+              <th>Action</th>
+            </thead>
+            <tbody>
+              <?php
+              foreach ($rows as $row ) {
+              ?>
+              <tr>
+                  <td><?php echo $row['clinic_id']; ?></td>
+                  <td><?php echo $row['clinic_name']; ?></td>
+                  <td><?php echo $row['clinic_address']; ?></td>
+                  <td><?php echo $row['clinic_phone']; ?></td>
+                  <td><?php echo $row['clinic_disc']; ?></td>
+                  <td>
+                      <a href='EditPage.php?id=<?php echo $row['sid']; ?>' class='btn btn-primary'>Edit</a>
+                      <a href='delete.php?id=<?php echo $row['sid']; ?>'class='btn btn-danger'>Delete</a>
+                  </td>
+              </tr>
+              <?php } ?>
+            </tbody>
+        </table>
+          <? elseif(isset($_GET['do']) && $_GET['do']  == 'hospital'):
+          $stmt = $con -> prepare("SELECT * From hospital");
+          $stmt ->execute();
+          $rows = $stmt-> fetchAll();
+        ?>
+        <table class="table table-striped table-dark table-hover">
+          <thead>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Discription</th>
+            <th>Action</th>
+          </thead>
+          <tbody>
+            <?php
+            foreach ($rows as $row ) {
+            ?>
+            <tr>
+              <td><?php echo $row['hospital_id']; ?></td>
+              <td><?php echo $row['hospital_name']; ?></td>
+              <td><?php echo $row['hospital_address']; ?></td>
+              <td><?php echo $row['hospital_phone']; ?></td>
+              <td><?php echo $row['hospital_disc']; ?></td>
+              <td>
+                  <a href='EditPage.php?id=<?php echo $row['sid']; ?>' class='btn btn-primary'>Edit</a>
+                  <a href='delete.php?id=<?php echo $row['sid']; ?>'class='btn btn-danger'>Delete</a>
+              </td>
+            </tr>
+            <?php } ?>
+          </tbody>
+        </table>
+      <? elseif(isset($_GET['do']) && $_GET['do']  == 'coffe'):
+      $stmt = $con -> prepare("SELECT * From coffee");
+      $stmt ->execute();
+      $rows = $stmt-> fetchAll();
+    ?>
+    <table class="table table-striped table-dark table-hover">
+      <thead>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Phone</th>
+        <th>Discription</th>
+        <th>Action</th>
+      </thead>
+      <tbody>
+        <?php
+        foreach ($rows as $row ) {
+        ?>
+        <tr>
+            <td><?php echo $row['coffee_id']; ?></td>
+            <td><?php echo $row['coffee_name']; ?></td>
+            <td><?php echo $row['coffee_address']; ?></td>
+            <td><?php echo $row['coffee_phone']; ?></td>
+            <td><?php echo $row['coffee_disc']; ?></td>
+            <td>
+                <a href='EditPage.php?id=<?php echo $row['sid']; ?>' class='btn btn-primary'>Edit</a>
+                <a href='delete.php?id=<?php echo $row['sid']; ?>'class='btn btn-danger'>Delete</a>
+            </td>
+        </tr>
+        <?php } ?>
+      </tbody>
+    </table>
+  <? elseif(isset($_GET['do']) && $_GET['do']  == 'resturant'):
+    $stmt = $con -> prepare("SELECT * From resturant");
+    $stmt ->execute();
+    $rows = $stmt-> fetchAll();
+      ?>
+    <table class="table table-striped table-dark table-hover">
+      <thead>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Phone</th>
+        <th>Discription</th>
+        <th>Action</th>
+      </thead>
+      <tbody>
+        <?php
+        foreach ($rows as $row ) {
+        ?>
+        <tr>
+            <td><?php echo $row['resturant_id']; ?></td>
+            <td><?php echo $row['resturant_name']; ?></td>
+            <td><?php echo $row['resturant_address']; ?></td>
+            <td><?php echo $row['resturant_disc']; ?></td>
+            <td>
+                <a href='EditPage.php?id=<?php echo $row['sid']; ?>' class='btn btn-primary'>Edit</a>
+                <a href='delete.php?id=<?php echo $row['sid']; ?>'class='btn btn-danger'>Delete</a>
+            </td>
+        </tr>
+        <?php } ?>
+      </tbody>
+    </table>
+          <? endif; ?>
         </div>
       </main>
-      <!-- models -->
-      <!-- add medical model -->
-      <!-- Modal -->
-        <div class="modal fade" id="addMedical" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-            <div class="modal-content">
-              <form action="row g-3">
-                <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Add rest</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                        <div class="col-12">
-                            <label for="formFile" class="form-label">add the picture</label>
-                            <input class="form-control" type="file" id="formFile">
-                        </div>
 
-                        <div class="col-12">
-                            <label for="addMedicalName" class="form-label">Medical Name:</label>
-                            <input type="text" class="form-control" id="addmedicalnaMe" plaNeholder="Ex: Al-Zhraa Hospital">
-                        </div>
-
-                        <div class="col-12">
-                          <label for="inputAddress" class="form-label">Address</label>
-                          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-                        </div>
-
-
-
-                          <div class="col-12">
-                            <label for="addDescription" class="form-label">add discription</label>
-                            <textarea name="editor1" class="form-control" id="addDescription" rows="3"></textarea>
-                          </div>
-
-                          <div class="col-12">
-                            <label for="inputState" class="form-label">Type</label>
-                            <select id="inputState" class="form-select">
-                              <option selected>Hospital</option>
-                              <option selected>Clincs</option>
-                              <option selected>pharmacy</option>
-
-                            </select>
-                          </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Submit</button>
-                </div>
-            </div>
-            </form>
-            </div>
-            </div>
-        </div>
-        <!-- add rest model -->
-      <!-- Modal -->
-      <div class="modal fade" id="addRest" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-        <div class="modal-content">
-          <form action="row g-3">
-            <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Add Rest</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                    <div class="col-12">
-                        <label for="formFileMultiple" class="form-label">add the picture and the menu</label>
-                        <input class="form-control" type="file" id="formFileMultiple" multiple>
-                    </div>
-
-                    <div class="col-12">
-                        <label for="addMedicalName" class="form-label">Rest Name:</label>
-                        <input type="text" class="form-control" id="addmedicalnaMe" plaNeholder="Ex: Al-Zhraa Hospital">
-                    </div>
-
-                    <div class="col-12">
-                      <label for="inputAddress" class="form-label">Address</label>
-                      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-                    </div>
-
-                    <div class="col-12">
-                        <label for="numberOfPeople" class="form-label">number of pepole:</label>
-                        <input type="number" class="form-control" id="numberOfPeople" placeholder="1234">
-                      </div>
-
-                      <div class="col-12">
-                        <label for="addDescription" class="form-label">add discription</label>
-                        <textarea name="editor1" class="form-control" id="addDescription" rows="3"></textarea>
-                      </div>
-                      <div class="col-12">
-                        <label for="inputState" class="form-label">Type</label>
-                        <select id="inputState" class="form-select">
-                          <option selected>Coffee</option>
-                          <option selected>Resturant</option>
-
-                        </select>
-                      </div>
-
-            <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Submit</button>
-            </div>
-        </div>
-        </form>
-        </div>
-        </div>
-    </div>
-        <script src="https://cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
-        <script>
-            CKEDITOR.replace( 'editor1' );
-    </script>
+    <script src="https://cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
+    <script>CKEDITOR.replace( 'editor1' );</script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
