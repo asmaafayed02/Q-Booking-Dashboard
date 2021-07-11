@@ -29,6 +29,7 @@
     }
 ?>
 <div id="main-content">
+    <button type="button" name="button"> <a href="index.php">Back to Dashboard</a> </button>
     <h2>Add New Record</h2>
     <form class="post-form" action="<? echo $_SERVER['PHP_SELF']; ?>" method="post">
         <div class="form-group">

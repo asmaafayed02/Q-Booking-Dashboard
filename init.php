@@ -8,3 +8,4 @@
     // includes Files
 
     include 'connection.php';
+    include 'includes/functions/function.php';

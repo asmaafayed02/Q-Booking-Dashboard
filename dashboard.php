@@ -54,7 +54,7 @@
                                 Dashboard</a>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link" href="dashboard.php?do=clinics">
+                              <a class="nav-link" href="dashboard.php?do=clincs">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/></svg>
                                   Clinics</a>
                             </li>
@@ -83,11 +83,11 @@
         <div class="position-absolute top-50 start-50 translate-middle">
           <?php if (isset($_GET['do']) && $_GET['do']  == 'dashboard'):
             $stmt = $con -> prepare("SELECT
-                                      (SELECT COUNT(user_id) From users) AS numOfUsers,
-                                      (SELECT COUNT(clinic_id) FROM clincs) as numOfClinics,
-                                      (SELECT COUNT(hospital_id) From hospital) AS numOfHospitals,
-                                      (SELECT COUNT(coffee_id) From coffee) AS numOfcoffee,
-                                      (SELECT COUNT(resturant_id) From resturant) AS numOfresturants ");
+                                      (SELECT COUNT(user_id) FROM users) AS numOfUsers,
+                                      (SELECT COUNT(id) FROM clincs) as numOfClinics,
+                                      (SELECT COUNT(id) FROM hospital) AS numOfHospitals,
+                                      (SELECT COUNT(id) FROM coffee) AS numOfcoffee,
+                                      (SELECT COUNT(id) FROM resturant) AS numOfresturants ");
             $stmt ->execute();
             $row = $stmt-> fetch();
             $count = $stmt->rowCount();
@@ -111,7 +111,7 @@
               </tbody>
             </table>
 
-          <? elseif(isset($_GET['do']) && $_GET['do']  == 'clinics'):
+          <? elseif(isset($_GET['do']) && $_GET['do']  == 'clincs'):
             $stmt = $con -> prepare("SELECT * From clincs");
             $stmt ->execute();
             $rows = $stmt-> fetchAll();
@@ -130,14 +130,14 @@
               foreach ($rows as $row ) {
               ?>
               <tr>
-                  <td><?php echo $row['clinic_id']; ?></td>
-                  <td><?php echo $row['clinic_name']; ?></td>
-                  <td><?php echo $row['clinic_address']; ?></td>
-                  <td><?php echo $row['clinic_phone']; ?></td>
-                  <td><?php echo $row['clinic_disc']; ?></td>
+                  <td><?php echo $row['id']; ?></td>
+                  <td><?php echo $row['name']; ?></td>
+                  <td><?php echo $row['address']; ?></td>
+                  <td><?php echo $row['phone']; ?></td>
+                  <td><?php echo $row['disc']; ?></td>
                   <td>
-                      <a href='EditPage.php?id=<?php echo $row['sid']; ?>' class='btn btn-primary'>Edit</a>
-                      <a href='delete.php?id=<?php echo $row['sid']; ?>'class='btn btn-danger'>Delete</a>
+                      <a href='edit.php?id=<?php echo $row['id']; ?>&module=clincs' class='btn btn-primary'>Edit</a>
+                      <a href='delete.php?id=<?php echo $row['id']; ?>&module=clincs'class='btn btn-danger'>Delete</a>
                   </td>
               </tr>
               <?php } ?>
@@ -162,14 +162,14 @@
             foreach ($rows as $row ) {
             ?>
             <tr>
-              <td><?php echo $row['hospital_id']; ?></td>
-              <td><?php echo $row['hospital_name']; ?></td>
-              <td><?php echo $row['hospital_address']; ?></td>
-              <td><?php echo $row['hospital_phone']; ?></td>
-              <td><?php echo $row['hospital_disc']; ?></td>
+              <td><?php echo $row['id']; ?></td>
+              <td><?php echo $row['name']; ?></td>
+              <td><?php echo $row['address']; ?></td>
+              <td><?php echo $row['phone']; ?></td>
+              <td><?php echo $row['disc']; ?></td>
               <td>
-                  <a href='EditPage.php?id=<?php echo $row['sid']; ?>' class='btn btn-primary'>Edit</a>
-                  <a href='delete.php?id=<?php echo $row['sid']; ?>'class='btn btn-danger'>Delete</a>
+                  <a href='edit.php?id=<?php echo $row['id']; ?>&module=hospital' class='btn btn-primary'>Edit</a>
+                  <a href='delete.php?id=<?php echo $row['id']; ?>&module=hospital'class='btn btn-danger'>Delete</a>
               </td>
             </tr>
             <?php } ?>
@@ -194,14 +194,14 @@
         foreach ($rows as $row ) {
         ?>
         <tr>
-            <td><?php echo $row['coffee_id']; ?></td>
-            <td><?php echo $row['coffee_name']; ?></td>
-            <td><?php echo $row['coffee_address']; ?></td>
-            <td><?php echo $row['coffee_phone']; ?></td>
-            <td><?php echo $row['coffee_disc']; ?></td>
+            <td><?php echo $row['id']; ?></td>
+            <td><?php echo $row['name']; ?></td>
+            <td><?php echo $row['address']; ?></td>
+            <td><?php echo $row['phone']; ?></td>
+            <td><?php echo $row['disc']; ?></td>
             <td>
-                <a href='EditPage.php?id=<?php echo $row['sid']; ?>' class='btn btn-primary'>Edit</a>
-                <a href='delete.php?id=<?php echo $row['sid']; ?>'class='btn btn-danger'>Delete</a>
+                <a href='edit.php?id=<?php echo $row['id']; ?>&module=coffee' class='btn btn-primary'>Edit</a>
+                <a href='delete.php?id=<?php echo $row['id']; ?>&module=coffee'class='btn btn-danger'>Delete</a>
             </td>
         </tr>
         <?php } ?>
@@ -226,13 +226,13 @@
         foreach ($rows as $row ) {
         ?>
         <tr>
-            <td><?php echo $row['resturant_id']; ?></td>
-            <td><?php echo $row['resturant_name']; ?></td>
-            <td><?php echo $row['resturant_address']; ?></td>
-            <td><?php echo $row['resturant_disc']; ?></td>
+            <td><?php echo $row['id']; ?></td>
+            <td><?php echo $row['name']; ?></td>
+            <td><?php echo $row['address']; ?></td>
+            <td><?php echo $row['disc']; ?></td>
             <td>
-                <a href='EditPage.php?id=<?php echo $row['sid']; ?>' class='btn btn-primary'>Edit</a>
-                <a href='delete.php?id=<?php echo $row['sid']; ?>'class='btn btn-danger'>Delete</a>
+                <a href='edit.php?id=<?php echo $row['id']; ?>&module=resturant' class='btn btn-primary'>Edit</a>
+                <a href='delete.php?id=<?php echo $row['id']; ?>&module=resturant'class='btn btn-danger'>Delete</a>
             </td>
         </tr>
         <?php } ?>

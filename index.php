@@ -6,7 +6,7 @@
 
   if (isset($_SESSION['username'])) {
 
-          header('location: dashboard.php'); //redircet to dashborad
+          header('location: dashboard.php?do=dashboard'); //redircet to dashborad
   }
 
   include 'init.php';
