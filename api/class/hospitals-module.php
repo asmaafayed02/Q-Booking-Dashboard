@@ -1,7 +1,7 @@
 <?php
-class modules{
+class hospital{
 
-    private $itemsTable = "clincs";
+    private $itemsTable = "hospital";
     public $id;
     public $name;
     public $disc;

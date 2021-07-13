@@ -12,22 +12,23 @@ include 'init.php';
 
       $id = isset($_GET['id']) && is_numeric($_GET['id']) ? intval($_GET['id']) : 0;
       $module = $_GET['module'];
-      
+
         // Select all Data depend on This ID
 
       $check = checkItem('id', $module, $id);
 
       if($check > 0) {
 
-        $stmt = $con->prepare('DELETE FROM :module WHERE id = :id');
+        $stmt = $con->prepare("DELETE FROM $module WHERE id = :id");
         $stmt->execute([
-          'module' => $module,
-          'id' => $id
+          ':id' => $id
         ]);
 
         if ($stmt->rowCount()) {
 
-            $theMsg = '<div class="alert alert-success">' . $stmt->rowCount() . ' User Delete</div>';
+          echo  $theMsg = '<div class="alert alert-danger">' . $stmt->rowCount() . ' module Delete</div>';
+          header('Location: ' . $_SERVER['HTTP_REFERER']);
+           exit();
         }
       }
 

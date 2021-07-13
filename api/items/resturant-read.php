@@ -3,12 +3,12 @@ header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 
 include_once '../config/database.php';
-include_once '../class/modules.php';
+include_once '../class/resturant-module.php';
 
 $database = new Database();
 $db = $database->getConnection();
 
-$modules = new modules($db);
+$modules = new resturant($db);
 
 $modules->id = (isset($_GET['id']) && $_GET['id']) ? $_GET['id'] : '0';
 $result = $modules->read();
